@@ -25,6 +25,11 @@ module.exports = {
       url: {
         type: Sequelize.STRING
       },
+      isFavourite: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       shippingCosts: {
         allowNull: false,
         defaultValue: 0.0,

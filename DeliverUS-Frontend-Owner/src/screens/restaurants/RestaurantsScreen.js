@@ -35,6 +35,9 @@ export default function RestaurantsScreen ({ navigation, route }) {
           navigation.navigate('RestaurantDetailScreen', { id: item.id })
         }}
       >
+        { item.isDiscounted &&
+            <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}> {item.discountNumber}% of discount using the code {item.discountCode}</TextSemiBold>
+          }
         <TextRegular numberOfLines={2}>{item.description}</TextRegular>
         {item.averageServiceMinutes !== null &&
           <TextSemiBold>Avg. service time: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.averageServiceMinutes} min.</TextSemiBold></TextSemiBold>

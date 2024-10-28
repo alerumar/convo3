@@ -22,6 +22,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      discountCode: {
+        type: Sequelize.STRING,
+        defaultValue: 'POLLA'
+      },
+      discountNumber: {
+        type: Sequelize.INTEGER,
+        defaultValue: 10
+      },
+      isDiscounted: {
+        defaultValue: false,
+        type: Sequelize.BOOLEAN
+      },
       url: {
         type: Sequelize.STRING
       },

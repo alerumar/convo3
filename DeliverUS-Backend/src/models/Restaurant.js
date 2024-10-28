@@ -63,6 +63,18 @@ const loadModel = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.INTEGER
     },
+    discountCode: {
+      type: DataTypes.STRING,
+      defaultValue: 'POLLA'
+    },
+    discountNumber: {
+      type: DataTypes.INTEGER,
+      defaultValue: 10
+    },
+    isDiscounted: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
     userId: {
       allowNull: false,
       type: DataTypes.INTEGER

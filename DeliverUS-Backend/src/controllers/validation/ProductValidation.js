@@ -28,7 +28,8 @@ const create = [
   }).withMessage('Please upload an image with format (jpeg, png).'),
   check('image').custom((value, { req }) => {
     return checkFileMaxSize(req, 'image', maxFileSize)
-  }).withMessage('Maximum file size of ' + maxFileSize / 1000000 + 'MB')
+  }).withMessage('Maximum file size of ' + maxFileSize / 1000000 + 'MB'),
+  check('basePrice').exists().isFloat()
 ]
 
 const update = [

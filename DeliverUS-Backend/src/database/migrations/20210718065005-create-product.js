@@ -38,6 +38,11 @@ module.exports = {
         },
         onDelete: 'cascade'
       },
+      basePrice: {
+        type: Sequelize.DOUBLE,
+        allowNull: false,
+        defaultValue: 0.0
+      },
       productCategoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
